@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #FAF5EB;
+  --color-brand-card: #FFFFFF;
+  --color-brand-beige: #EDE4D8;
+  --color-brand-beige-light: #F4EFEA;
+  --color-brand-gold: #A88955;
+  --color-brand-gold-hover: #8F7241;
+  --color-brand-gold-light: #C5A880;
+  --color-brand-gold-subtle: #F3ECE1;
+  --color-brand-text: #292722;
+  --color-brand-text-muted: #77736B;
+  --color-brand-border: #E8E2D9;
+  --color-brand-border-light: #F0ECE4;
+  --color-brand-success: #3D6847;
+  --color-brand-error: #A63D40;
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+  --bg-main: #FAF5EB;
+  --bg-card: #FFFFFF;
+  --bg-beige: #EDE4D8;
+  --gold-accent: #A88955;
+  --text-primary: #292722;
+  --text-secondary: #77736B;
+  --border-color: #E8E2D9;
+}
+
+* {
+  border-color: #E8E2D9;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #FAF5EB;
+  color: #292722;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF5EB;
+  color: #292722;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Typography Utilities */
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Subtle luxury shadows & borders */
+.luxury-border {
+  border: 1px solid #E8E2D9;
+}
+
+.luxury-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E8E2D9;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  border-color: #C5A880;
+  box-shadow: 0 10px 30px -10px rgba(41, 39, 34, 0.06);
+}
+
+/* Gold button styling */
+.btn-gold {
+  background-color: #A88955;
+  color: #FFFFFF;
+  transition: all 0.25s ease;
+}
+.btn-gold:hover {
+  background-color: #8F7241;
+}
+
+.btn-outline-gold {
+  border: 1px solid #A88955;
+  color: #A88955;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+.btn-outline-gold:hover {
+  background-color: #A88955;
+  color: #FFFFFF;
+}
+
+/* Subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF5EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D0C5;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A88955;
+}
+
+/* Image zoom on hover */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.04);
+}
+
+@keyframes heroProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-progress {
+  animation: heroProgress 3000ms linear infinite;
+}
